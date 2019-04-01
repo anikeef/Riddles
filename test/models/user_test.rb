@@ -46,4 +46,10 @@ class UserTest < ActiveSupport::TestCase
     @user.email = "@invalid.com"
     assert_not @user.valid?
   end
+
+  test "email uniqueness" do
+    other_user = User.create(name: "Example User", email: "email@example.com",
+      password: "foobar", password_confirmation: "foobar")
+    assert_not @user.valid?
+  end
 end
