@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'riddles/index'
+  root 'riddles#index'
 
   resources :riddles
   resources :users
