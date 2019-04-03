@@ -130,3 +130,15 @@ form {
     }
   }
 }
+
+/********** Alerts **********/
+
+.alert {
+  padding: 18px 20px;
+  margin: 20px 0;
+}
+
+.alert-success {
+  background-color: #278664;
+  text-align: center;
+}
