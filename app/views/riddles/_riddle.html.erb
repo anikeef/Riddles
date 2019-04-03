@@ -1,0 +1,9 @@
+<div class="riddle">
+  <h2><span class="username"><%= riddle.user.name %></span> asked <%= time_ago_in_words(riddle.updated_at) %> ago</h2>
+  <p>
+    <%= riddle.body %>
+  </p>
+  <div class="answer">
+    <b>Answer:</b> <%= riddle.answer %>
+  </div>
+</div>
