@@ -5,6 +5,8 @@ $grey: #24292E;
 $light-grey: #3F4347;
 $lighter-grey: #8a8a8a;
 $blue: #00ACEA;
+$green: #278664;
+$red: #732323;
 //Font-weight
 $normal: 400;
 $light: 300;
@@ -149,20 +151,23 @@ form {
 }
 
 .alert-success {
-  background-color: #278664;
+  background-color: $green;
   text-align: center;
 }
 
 .alert-errors {
-  background-color: #732323;
+  background-color: $red;
 }
 
 /********** Footer **********/
 
 .footer {
   text-align: center;
-  padding: 20px;
+  padding: 25px;
+  font-size: 14px;
+  font-weight: $light;
   img {
-    width: 30px;
+    width: 60px;
+
   }
 }
