@@ -1,8 +1,8 @@
 <div class="header">
-  <%= image_tag("logo.png") %>
+  <%= link_to image_tag("logo.png"), root_path %>
   <h1>Riddles</h1>
   <ul class="nav">
-    <li>Sign up</li>
+    <li><%= link_to "Sign up", new_user_path %></li>
     <li>Log in</li>
   </ul>
 </div>
