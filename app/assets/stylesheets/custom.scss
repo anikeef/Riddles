@@ -22,12 +22,17 @@ body {
   color: white;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .content {
   padding-top: 60px;
+  width: 100%;
   max-width: 720px;
   margin: 0 auto;
+  flex: 1;
 }
 
 h1, h2 {
@@ -150,4 +155,14 @@ form {
 
 .alert-errors {
   background-color: #732323;
+}
+
+/********** Footer **********/
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  img {
+    width: 30px;
+  }
 }
