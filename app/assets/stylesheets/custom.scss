@@ -30,7 +30,7 @@ body {
 }
 
 .content {
-  padding-top: 60px;
+  padding-top: 65px;
   width: 100%;
   max-width: 720px;
   margin: 0 auto;
@@ -78,6 +78,7 @@ a {
     li {
       padding-left: 25px;
       float: right;
+      font-weight: $light;
     }
   }
 }
@@ -175,6 +176,21 @@ form {
 /********** Media queries **********/
 
 @media (min-width: 720px) {
+  .header {
+    padding: 20px 100px;
+    img {
+      width: 40px;
+    }
+
+    .nav li {
+      padding-left: 40px;
+    }
+  }
+
+  .content {
+    padding-top: 75px;
+  }
+
   .box {
     border-radius: 6px;
     p, .answer, h2 {
