@@ -2,14 +2,14 @@
   <div class="logo">
     <%= link_to root_path do %>
       <%= image_tag("logo.png", title: "Icon made by Kiranshastry from www.flaticon.com ") %>
-      <h1>Riddles</h1>
+      <h1>Problems</h1>
     <% end %>
   </div>
 
   <ul class="nav">
     <% if logged_in? %>
       <li><%= link_to "Log out", logout_path, method: :delete %></li>
-      <li><%= link_to "New riddle", new_riddle_path %></li>
+      <li><%= link_to "New problem", new_riddle_path %></li>
     <% else %>
       <li><%= link_to "Sign up", signup_path %></li>
       <li><%= link_to "Log in", login_path %></li>

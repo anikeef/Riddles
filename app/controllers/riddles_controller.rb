@@ -13,7 +13,7 @@ class RiddlesController < ApplicationController
     @riddle = Riddle.new(riddle_params)
     @riddle.user = current_user
     if @riddle.save
-      flash[:success] = "Your riddle has been published"
+      flash[:success] = "Your problem has been published"
       redirect_to root_url
     else
       render "new"
