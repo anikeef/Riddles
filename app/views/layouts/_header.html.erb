@@ -1,6 +1,11 @@
 <div class="header">
-  <%= link_to image_tag("logo.png"), root_path %>
-  <h1>Riddles</h1>
+  <div class="logo">
+    <%= link_to root_path do %>
+      <%= image_tag("logo.png") %>
+      <h1>Riddles</h1>
+    <% end %>
+  </div>
+
   <ul class="nav">
     <% if logged_in? %>
       <li><%= link_to "Log out", logout_path, method: :delete %></li>
