@@ -2,7 +2,7 @@ require 'test_helper'
 
 class SignUpTest < ActionDispatch::IntegrationTest
   test "invalid data" do
-    get new_user_path
+    get signup_path
     assert_template "users/new"
     assert_no_difference "User.count" do
       post users_path, params: {user: {
@@ -16,7 +16,7 @@ class SignUpTest < ActionDispatch::IntegrationTest
   end
 
   test "valid data" do
-    get new_user_path
+    get signup_path
     assert_difference "User.count", 1 do
       post users_path, params: {user: {
         name: "Name",
