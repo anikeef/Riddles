@@ -2,7 +2,12 @@
   <%= link_to image_tag("logo.png"), root_path %>
   <h1>Riddles</h1>
   <ul class="nav">
-    <li><%= link_to "Sign up", signup_path %></li>
-    <li><%= link_to "Log in", login_path %></li>
+    <% if logged_in? %>
+      <li><%= link_to "Log out", logout_path, method: :delete %></li>
+      <li><%= link_to "New riddle", "#" %></li>
+    <% else %>
+      <li><%= link_to "Sign up", signup_path %></li>
+      <li><%= link_to "Log in", login_path %></li>
+    <% end %>
   </ul>
 </div>
