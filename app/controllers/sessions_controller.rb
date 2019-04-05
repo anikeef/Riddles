@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  before_action :logged_out, except: :destroy
+
   def new
   end
 
@@ -14,7 +16,13 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    log_out if logged_in?
+    log_out
     redirect_to root_url
+  end
+
+  private
+
+  def logged_out
+    redirect_to root_url if logged_in?
   end
 end
