@@ -1,9 +1,19 @@
 <div class="box">
-  <h2><span class="username"><%= riddle.user.name %></span> asked <%= time_ago_in_words(riddle.updated_at) %> ago</h2>
+  <h2>
+    <span class="username">
+      <%= logged_in? ? riddle.user.name : "Anonymous" %>
+    </span> asked <%= time_ago_in_words(riddle.updated_at) %> ago
+  </h2>
   <p>
     <%= riddle.body %>
   </p>
   <div class="answer">
-    <b>Answer:</b> <%= riddle.answer %>
+    <% if logged_in? %>
+      <b>Answer:</b> <%= riddle.answer %>
+    <% else %>
+      <div class="hidden_answer">
+        Log in to see the answer and the author
+      </div>
+    <% end %>
   </div>
 </div>
