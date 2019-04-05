@@ -1,0 +1,7 @@
+<%= render "errors" %>
+<%= form_for @riddle do |f| %>
+  <h1>New riddle</h1>
+  <%= f.text_area :body, placeholder: "Body", rows: 10 %>
+  <%= f.text_field :answer, placeholder: "Answer" %>
+  <%= f.submit "Create riddle" %>
+<% end %>
