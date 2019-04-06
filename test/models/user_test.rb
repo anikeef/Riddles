@@ -20,6 +20,12 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.valid?
   end
 
+  test "name uniqueness" do
+    other_user = User.create(name: "Example User", email: "other@example.com",
+      password: "foobar", password_confirmation: "foobar")
+    assert_not @user.valid?
+  end
+
   test "password presence" do
     @user.password = @user.password_confirmation = ""
     assert_not @user.valid?
@@ -48,7 +54,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "email uniqueness" do
-    other_user = User.create(name: "Example User", email: "email@example.com",
+    other_user = User.create(name: "Example User 2", email: "email@example.com",
       password: "foobar", password_confirmation: "foobar")
     assert_not @user.valid?
   end
