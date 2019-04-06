@@ -1,27 +1,27 @@
 require 'test_helper'
 
-class NewRiddleTest < ActionDispatch::IntegrationTest
+class NewProblemTest < ActionDispatch::IntegrationTest
   def setup
     @user = users(:one)
     log_in_as @user
   end
 
-  test "invalid riddle" do
-    get new_riddle_path
-    assert_template "riddles/new"
-    assert_no_difference "Riddle.count" do
-      post riddles_path, params: {riddle: {
+  test "invalid problem" do
+    get new_problem_path
+    assert_template "problems/new"
+    assert_no_difference "Problem.count" do
+      post problems_path, params: {problem: {
         body: "foobar",
         answer: ""
       }}
     end
-    assert_template "riddles/new"
+    assert_template "problems/new"
     assert_select "div.alert-errors"
   end
 
-  test "valid riddle" do
-    assert_difference "@user.riddles.count", 1 do
-      post riddles_path, params: {riddle: {
+  test "valid problem" do
+    assert_difference "@user.problems.count", 1 do
+      post problems_path, params: {problem: {
         body: "foobar",
         answer: "foobar"
       }}

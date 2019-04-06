@@ -10,7 +10,7 @@ class LogInTest < ActionDispatch::IntegrationTest
     assert_template "sessions/new"
     assert_select "a[href=?]", signup_path
     assert_select "a[href=?]", logout_path, false
-    assert_select "a[href=?]", new_riddle_path, false
+    assert_select "a[href=?]", new_problem_path, false
   end
 
   test "invalid data" do
@@ -38,7 +38,7 @@ class LogInTest < ActionDispatch::IntegrationTest
     }}
     assert_redirected_to root_url
     follow_redirect!
-    assert_select "a[href=?]", new_riddle_path
+    assert_select "a[href=?]", new_problem_path
     assert_select "a[href=?]", logout_path
     assert_select "a[href=?]", signup_path, false
     assert_select "a[href=?]", login_path, false
@@ -46,7 +46,7 @@ class LogInTest < ActionDispatch::IntegrationTest
     delete logout_path
     assert_redirected_to root_url
     follow_redirect!
-    assert_select "a[href=?]", new_riddle_path, false
+    assert_select "a[href=?]", new_problem_path, false
     assert_select "a[href=?]", logout_path, false
     assert_select "a[href=?]", signup_path
     assert_select "a[href=?]", login_path

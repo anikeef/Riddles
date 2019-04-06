@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   delete 'logout', to: "sessions#destroy"
   get 'signup', to: "users#new"
 
-  root 'riddles#index'
+  root 'problems#index'
 
-  resources :riddles
+  resources :problems
   resources :users
 end

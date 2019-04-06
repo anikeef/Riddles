@@ -1,5 +1,5 @@
 <%= render "errors" %>
-<%= form_for @riddle do |f| %>
+<%= form_for @problem do |f| %>
   <h1>New problem</h1>
   <%= f.text_area :body, placeholder: "Body", rows: 10 %>
   <%= f.text_field :answer, placeholder: "Answer" %>

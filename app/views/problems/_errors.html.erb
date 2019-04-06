@@ -1,0 +1,7 @@
+<% unless @problem.errors.blank? %>
+<div class="alert alert-errors">
+  <% @problem.errors.full_messages.each do |msg| %>
+    <p> <%= msg %> </p>
+  <% end %>
+</div>
+<% end %>
