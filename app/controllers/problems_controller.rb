@@ -2,7 +2,7 @@ class ProblemsController < ApplicationController
   before_action :logged_in, only: [:new, :create]
 
   def index
-    @problems = Problem.all
+    @problems = Problem.order(created_at: :desc)
   end
 
   def new
