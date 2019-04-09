@@ -87,7 +87,7 @@ a {
 /********** Box (riddle and user) **********/
 
 .box {
-  margin-top: 20px;
+  margin-top: 7px;
   background-color: $light-grey;
   line-height: 1.4;
 
@@ -205,6 +205,7 @@ form {
 
   .box {
     border-radius: 6px;
+    margin-top: 20px;
     p, .answer, h2 {
       padding-left: 70px;
       padding-right: 70px;
