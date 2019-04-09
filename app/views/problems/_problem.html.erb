@@ -7,13 +7,16 @@
   <p>
     <%= problem.body %>
   </p>
-  <div class="answer">
+
     <% if logged_in? %>
-      <b>Answer:</b> <%= problem.answer %>
+      <div class="answer" onclick="this.innerHTML = '<b>Answer: </b><%= problem.answer %>'">
+        <div class="hidden_answer">
+          Click here to see the answer
+        </div>
+      </div>
     <% else %>
-      <div class="hidden_answer">
+      <div class="restricted_answer">
         Log in to see the answer and the author
       </div>
     <% end %>
-  </div>
 </div>

@@ -100,15 +100,18 @@ a {
       color: $blue;
     }
   }
+
   p {
     padding: 0 30px 30px 30px;
     margin: 0;
   }
-  .answer {
+
+  .answer, .restricted_answer {
     padding: 20px 30px;
     border-top: 1px solid $grey;
   }
-  .hidden_answer {
+
+  .restricted_answer, .hidden_answer {
     text-align: center;
     font-weight: $light;
   }
