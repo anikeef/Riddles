@@ -47,6 +47,18 @@ a {
   text-decoration: none;
 }
 
+.main_header {
+  font-size: 20px;
+  font-weight: $light;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.username, .username > a {
+  font-weight: $bold;
+  color: $blue;
+}
+
 /********** Header **********/
 
 .header {
@@ -95,10 +107,6 @@ a {
     padding: 30px;
     font-size: 16px;
     font-weight: $light;
-    .username {
-      font-weight: $bold;
-      color: $blue;
-    }
   }
 
   p {
@@ -184,6 +192,12 @@ form {
 /********** Media queries **********/
 
 @media (min-width: 720px) {
+  .main_header {
+    padding: 30px 0 20px;
+    font-size: 24px;
+    text-align: left;
+  }
+
   .header {
     padding: 20px 100px;
     img {

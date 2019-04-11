@@ -1,0 +1,18 @@
+<h1 class="main_header"><span class="username"><%= @user.name %></span> problems</h1>
+
+<% @user.problems.each do |problem| %>
+  <div class="box">
+    <h2>
+      Asked <%= time_ago_in_words(problem.updated_at) %> ago
+    </h2>
+    <p>
+      <%= problem.body %>
+    </p>
+
+    <div class="answer" onclick="this.innerHTML = '<b>Answer: </b><%= problem.answer %>'">
+      <div class="hidden_answer">
+        Click here to see the answer
+      </div>
+    </div>
+  </div>
+<% end %>
