@@ -1,5 +1,5 @@
 class ProblemsController < ApplicationController
-  before_action :logged_in, only: [:new, :create]
+  before_action :logged_in_user, only: [:new, :create]
 
   def index
     @problems = Problem.order(created_at: :desc)
@@ -24,9 +24,5 @@ class ProblemsController < ApplicationController
 
   def problem_params
     params.require(:problem).permit(:body, :answer, :user)
-  end
-
-  def logged_in
-    redirect_to root_url unless logged_in?
   end
 end
