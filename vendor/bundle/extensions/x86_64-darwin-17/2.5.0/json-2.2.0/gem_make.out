@@ -1,0 +1,13 @@
+current directory: /Users/a1/projects/problems/vendor/bundle/gems/json-2.2.0/ext/json
+/Users/a1/.rvm/rubies/ruby-2.5.1/bin/ruby -r ./siteconf20190424-1842-11xf73x.rb extconf.rb
+creating Makefile
+
+current directory: /Users/a1/projects/problems/vendor/bundle/gems/json-2.2.0/ext/json
+make "DESTDIR=" clean
+
+current directory: /Users/a1/projects/problems/vendor/bundle/gems/json-2.2.0/ext/json
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: /Users/a1/projects/problems/vendor/bundle/gems/json-2.2.0/ext/json
+make "DESTDIR=" install
