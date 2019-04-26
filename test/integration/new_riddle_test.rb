@@ -20,12 +20,14 @@ class NewProblemTest < ActionDispatch::IntegrationTest
   end
 
   test "valid problem" do
+    picture = fixture_file_upload("test/fixtures/files/avatar.jpg")
     assert_difference "@user.problems.count", 1 do
       post problems_path, params: {problem: {
         body: "foobar",
-        answer: "foobar"
+        answer: "foobar",
+        picture: picture
       }}
     end
-
+    assert @user.problems.last.picture?
   end
 end
