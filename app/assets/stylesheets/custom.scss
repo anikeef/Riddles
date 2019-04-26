@@ -175,7 +175,7 @@ form {
     padding: 30px;
   }
 
-  input, textarea {
+  input, textarea, .file_input {
     display: block;
     width: 100%;
     background-color: $light-grey;
@@ -195,6 +195,26 @@ form {
     transition: background-color 0.1s;
     &:hover {
       background-color: black;
+    }
+  }
+
+  input[type="file"] {
+    width: 0.1px;
+    height: 0.1px;
+    overflow: hidden;
+    opacity: 0;
+    position: absolute;
+  }
+
+  .file_input {
+    display: block;
+    //width: 50%;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid white;
+
+    &:hover {
+      cursor: pointer;
     }
   }
 }

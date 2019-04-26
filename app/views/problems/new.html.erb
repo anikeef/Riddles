@@ -4,5 +4,6 @@
   <%= f.text_area :body, placeholder: "Body", rows: 10 %>
   <%= f.text_field :answer, placeholder: "Answer" %>
   <%= f.file_field :picture, accept: "image/jpeg, image/gif, image/png" %>
+  <%= f.label :picture, "Attach an image", class: "file_input" %>
   <%= f.submit "Create problem" %>
 <% end %>

@@ -6,5 +6,6 @@
   <%= f.password_field :password, placeholder: "Password" %>
   <%= f.password_field :password_confirmation, placeholder: "Password confirmation" %>
   <%= f.file_field :avatar, accept: "image/jpeg, image/gif, image/png" %>
+  <%= f.label :avatar, "Upload an avatar", class: "file_input" %>
   <%= f.submit "Create account" %>
 <% end %>
