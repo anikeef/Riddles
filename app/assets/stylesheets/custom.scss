@@ -112,7 +112,7 @@ a {
   }
 }
 
-/********** Box (riddle and user) **********/
+/********** Box (problem and user) **********/
 
 .box {
   margin-top: 7px;
@@ -143,6 +143,14 @@ a {
   p {
     padding: 0 30px 30px 30px;
     margin: 0;
+  }
+
+  .attached-img {
+    display: block;
+    max-width: 100%;
+    max-height: 400px;
+    margin: auto;
+    //padding-bottom: 20px;
   }
 
   .answer, .restricted_answer {
@@ -216,7 +224,6 @@ form {
   font-weight: $light;
   img {
     width: 60px;
-
   }
 }
 
@@ -258,6 +265,10 @@ form {
     p, .answer, header {
       padding-left: 70px;
       padding-right: 70px;
+    }
+
+    .attached-img {
+      padding: 0 20px 20px;
     }
   }
 }

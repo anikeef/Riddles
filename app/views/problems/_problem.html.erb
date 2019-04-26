@@ -14,6 +14,10 @@
     <%= problem.body %>
   </p>
 
+  <div class="picture-container">
+    <%= image_tag(problem.picture, class: "attached-img") if problem.picture? %>
+  </div>
+
     <% if logged_in? %>
       <div class="answer" onclick="this.innerHTML = '<b>Answer: </b><%= problem.answer %>'">
         <div class="hidden_answer">
