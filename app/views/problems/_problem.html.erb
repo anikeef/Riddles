@@ -1,9 +1,15 @@
 <div class="box">
-  <h2>
-    <span class="username">
-      <%= logged_in? ? link_to(problem.user.name, user_path(problem.user)) : "Anonymous" %>
-    </span> asked <%= time_ago_in_words(problem.updated_at) %> ago
-  </h2>
+  <header>
+    <%= link_to problem.user, class: "avatar-link" do %>
+      <%= image_tag problem.user.avatar, class: "avatar" if logged_in? && problem.user.avatar? %>
+    <% end %>
+    <h2>
+      <span class="username">
+        <%= logged_in? ? link_to(problem.user.name, user_path(problem.user)) : "Anonymous" %>
+      </span> asked <%= time_ago_in_words(problem.updated_at) %> ago
+    </h2>
+  </header>
+
   <p>
     <%= problem.body %>
   </p>
