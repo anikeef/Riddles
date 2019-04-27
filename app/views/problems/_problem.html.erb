@@ -15,23 +15,25 @@
     <% end %>
   </header>
 
-  <p>
-    <%= problem.body %>
-  </p>
+  <% if problem.body? %>
+    <p>
+      <%= problem.body %>
+    </p>
+  <% end %>
 
-  <div class="picture-container">
-    <%= image_tag(problem.picture, class: "attached-img") if problem.picture? %>
-  </div>
+  <%= image_tag(problem.picture, class: "attached-img") if problem.picture? %>
 
-    <% if logged_in? %>
+  <% if logged_in? %>
+    <% if problem.answer? %>
       <div class="answer" onclick="this.innerHTML = '<b>Answer: </b><%= problem.answer %>'">
         <div class="hidden_answer">
           Click here to see the answer
         </div>
       </div>
-    <% else %>
-      <div class="restricted_answer">
-        Log in to see the answer and the author
-      </div>
     <% end %>
+  <% else %>
+    <div class="restricted_answer">
+      Log in to see the answer and the author
+    </div>
+  <% end %>
 </div>
