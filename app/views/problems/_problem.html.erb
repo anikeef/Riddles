@@ -8,6 +8,11 @@
         <%= logged_in? ? link_to(problem.user.name, user_path(problem.user)) : "Anonymous" %>
       </span> asked <%= time_ago_in_words(problem.updated_at) %> ago
     </h2>
+    <% if problem.user == current_user %>
+      <ul class="manage-links">
+        <li><%= link_to "delete", problem_path(problem), method: "delete" %></li>
+      </ul>
+    <% end %>
   </header>
 
   <p>
