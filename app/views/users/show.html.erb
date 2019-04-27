@@ -1,6 +1,6 @@
-<h1 class="user_header">
+<header class="user_header">
   <%= image_tag(@user.avatar, class: "avatar") if @user.avatar? %>
   <span class="username"><%= @user.name %></span> problems
-</h1>
+</header>
 
 <%= render @user.problems %>
