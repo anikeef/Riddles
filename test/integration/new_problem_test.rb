@@ -11,7 +11,7 @@ class NewProblemTest < ActionDispatch::IntegrationTest
     assert_template "problems/new"
     assert_no_difference "Problem.count" do
       post problems_path, params: {problem: {
-        body: "foobar",
+        body: "  ",
         answer: ""
       }}
     end
