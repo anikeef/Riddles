@@ -1,7 +1,11 @@
 <div class="box">
   <header>
-    <%= link_to problem.user, class: "avatar-link" do %>
-      <%= image_tag problem.user.avatar, class: "avatar" if logged_in? && problem.user.avatar? %>
+    <% if logged_in? %>
+      <%= link_to problem.user, class: "avatar-link" do %>
+        <%= image_tag (problem.user.avatar? ? problem.user.avatar : "default_avatar.png"), class: "avatar"  %>
+      <% end %>
+    <% else %>
+      <%= image_tag "default_avatar.png", class: "avatar" %>
     <% end %>
     <h2>
       <span class="username">
