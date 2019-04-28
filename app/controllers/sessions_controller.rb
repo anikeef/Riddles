@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
         log_in @user
         redirect_to root_url
       else
-        flash[:errors] = "Account not activated. Please check your email for activation link"
+        flash[:info] = "Account not activated. Please check your email for activation link"
         redirect_to root_url
       end
     else

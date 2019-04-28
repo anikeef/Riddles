@@ -5,6 +5,7 @@ $grey: #24292E;
 $light-grey: #3F4347;
 $lighter-grey: #8a8a8a;
 $blue: #00ACEA;
+$dark-blue: #007EA4;
 $green: #278664;
 $red: #732323;
 //Font-weight
@@ -244,6 +245,10 @@ form {
 
 .alert-errors {
   background-color: $red;
+}
+
+.alert-info {
+  background-color: $dark-blue;
 }
 
 /********** Footer **********/
