@@ -2,10 +2,14 @@
   <header>
     <% if logged_in? %>
       <%= link_to problem.user, class: "avatar-link" do %>
-        <%= image_tag (problem.user.avatar? ? problem.user.avatar : "default_avatar.png"), class: "avatar"  %>
+        <% if problem.user.avatar? %>
+          <%= image_tag problem.user.avatar, class: "avatar"  %>
+        <% else %>
+          <%= image_tag "default_avatar.png", class: "avatar", title: "Icons made by Smashicons from www.flaticon.com is licensed by CC 3.0 BY" %>
+        <% end %>
       <% end %>
     <% else %>
-      <%= image_tag "default_avatar.png", class: "avatar" %>
+      <%= image_tag "default_avatar.png", class: "avatar", title: "Icons made by Smashicons from www.flaticon.com is licensed by CC 3.0 BY" %>
     <% end %>
     <h2>
       <span class="username">
