@@ -12,7 +12,6 @@ class SignUpTest < ActionDispatch::IntegrationTest
         password_confirmation: ""
       }}
     end
-    assert_not assigns(:user).avatar?
     assert_template "users/new"
   end
 
@@ -28,7 +27,9 @@ class SignUpTest < ActionDispatch::IntegrationTest
         avatar: avatar
       }}
     end
+    assert flash.any?
     assert_redirected_to root_url
+    assert_not logged_in?
     assert User.find_by(name: "Name").avatar?
   end
 end

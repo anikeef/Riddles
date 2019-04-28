@@ -4,8 +4,10 @@ one:
   name: One
   email: foo@bar.com
   password_digest: <%= User.digest("password") %>
+  activated: true
 
 two:
   name: Two
   email: foo1@bar.com
   password_digest: <%= User.digest("password") %>
+  activated: true
