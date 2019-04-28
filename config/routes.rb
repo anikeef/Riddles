@@ -8,4 +8,5 @@ Rails.application.routes.draw do
 
   resources :problems
   resources :users
+  resources :account_activations, only: :edit
 end

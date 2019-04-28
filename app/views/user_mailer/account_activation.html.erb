@@ -1,0 +1,4 @@
+<h1>Welcome to Problems, <%= @user.name %>!</h1>
+
+<p>Please, click on the link below to activate your account and finally join our community:</p>
+<%= link_to "Activate", edit_account_activation_url(@user.activation_token, email: @user.email) %>
