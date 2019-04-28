@@ -23,6 +23,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @problems = @user.problems.order(created_at: :desc)
   end
 
   private
