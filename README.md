@@ -7,4 +7,4 @@ Features:
 * Sign up
 * Log in
 
-**NOTE: I renamed the app to Problems in the last moment, but you will encounter this new name only in the views. In the remaining part of the app, all posts are still called "riddles"**
+NOTE: I renamed the app to Problems in the last moment, so it is possible that you can meet the old name "Riddles" somewhere in the source code
